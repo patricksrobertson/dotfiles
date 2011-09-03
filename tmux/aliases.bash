@@ -1,0 +1,6 @@
+alias  t='tmux -u -f ~/.tmux'
+alias tl='tmux -u -f ~/.tmux list-session'
+alias ta='tmux -u -f ~/.tmux attach -t'
+alias tn='tmux -u -f ~/.tmux new -s'
+alias tp='tmux -u -f ~/.tmux -S /tmp/pair'
+alias tpa='tmux -u -f ~/.tmux -S /tmp/pair attach'
