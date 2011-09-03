@@ -17,3 +17,9 @@ fi
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
+
+# RVM
+[[ -s '/Users/wmernagh/.rvm/scripts/rvm' ]] && source '/Users/wmernagh/.rvm/scripts/rvm'
+
+# RVM
+[[ -s '/Users/wmernagh/.rvm/scripts/rvm' ]] && source '/Users/wmernagh/.rvm/scripts/rvm'
