@@ -9,3 +9,5 @@ alias migrate='rake db:migrate db:test:clone'
 alias be="bundle exec"
 alias cuc="bundle exec cucumber --format=pretty"
 alias s="bundle exec rspec --format=documentation"
+
+alias console="pry -r ./config/environment.rb"
