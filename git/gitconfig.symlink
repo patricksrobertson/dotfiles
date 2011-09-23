@@ -1,0 +1,50 @@
+[alias]
+  a = add
+  aa = !git add -A && git status -sb
+  c = commit -m
+  cibuild = push origin HEAD:wm-ci -f
+  co = checkout
+  cob = checkout -b
+  ir = !git rebase -i origin/master
+  done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && rake && git push
+  rmb = !sh -c 'git branch -D $1 && git push origin :$1' -
+  cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+  who   = !git shortlog -sn
+  lcrev = log --reverse --no-merges --stat @{1}..
+  next = !git add . && git rebase --continue
+  today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+  unfuck = reset --hard HEAD
+[color]
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[apply]
+  whitespace = nowarn
+[http]
+  sslverify = false
+  postBuffer = 1824288000
+[rerere]
+  enabled = 1
+[push]
+  default = current
+[web]
+  browser = open
+[user]
+  name = Will Mernagh
+  email = wmernagh@gmail.com
+[diff]
+  tool = vimdiff

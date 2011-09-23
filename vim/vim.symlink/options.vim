@@ -1,5 +1,3 @@
-set foldmethod=syntax             " me likes the syntax folding
-set foldnestmax=3                 " deepest fold level
 set nofoldenable
 set relativenumber " line numbers are relative to current line
 " set undofile       " Create FILE.un~ files for persistent undo
@@ -23,7 +21,7 @@ set cursorline     " highlight cursor line
 set mat=5          " Bracket blinking
 set fileencodings=utf-8,iso-8859-1
 set fileformats=unix,mac,dos
-set textwidth=78
+set textwidth=0    " No width
 set showbreak="@" " This is prepended to wrapped lines
 
 set list listchars=tab:»·,trail:· " Display extra whitespace
