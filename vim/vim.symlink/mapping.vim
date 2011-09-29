@@ -76,9 +76,6 @@ nnoremap <silent> <C-n> :tabnext<CR>
 nnoremap <silent> <C-p> :tabprevious<CR>
 nnoremap <silent> <C-t> :tabnew<CR>
 
-" Move lines up and down
-"map <C-J> :m +1 <CR>
-"map <C-K> :m -2 <CR>
 " Window navigation
 nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
@@ -104,3 +101,21 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 map <Leader>s :split <C-R>=expand("%:p:h") . "/" <CR>
 map <Leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 
+" http://stackoverflow.com/questions/762515/vim-remap-key-to-toggle-line-numbering
+" source: http://stackoverflow.com/questions/4387210/vim-how-to-map-two-tasks-under-one-shortcut-key
+" from @jayunit
+let g:relativenumber = 0
+set nonumber
+set relativenumber
+function! ToggleRelativeNumber()
+  if g:relativenumber == 0
+    let g:relativenumber = 1
+    set number
+    set norelativenumber
+  else
+    let g:relativenumber = 0
+    set nonumber
+    set relativenumber
+  endif
+endfunction
+map <C-X> :call ToggleRelativeNumber()<cr>
