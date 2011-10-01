@@ -5,6 +5,9 @@ export ZSH=$HOME/.dotfiles
 export PROJECTS=~/Dropbox/Development
 export IORA=~/Dropbox/Development/iora
 
+setopt auto_cd
+cdpath=($PROJECTS $IORA)
+
 # source every .zsh file in this rep
 for config_file ($ZSH/**/*.zsh) source $config_file
 
