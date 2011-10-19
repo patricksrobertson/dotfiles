@@ -24,6 +24,8 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
 - `git clone git://github.com/holman/dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
+- `git submodule update vim/vim-colors-solarized`
+- `git submodule update vim/vim.symlink/bundle/vundle`
 - `rake install`
 
 The install rake task will symlink the appropriate files in `.dotfiles` to your
