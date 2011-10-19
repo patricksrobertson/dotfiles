@@ -1,5 +1,56 @@
+#
+#
+#   OH MY ZSH
+#
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="wmernagh"
+# Below are themes that I still need to evaluate or pull stuff from into wmernagh
+#ZSH_THEME="edvardm" # Maybe
+#ZSH_THEME="garyblessington" # Maybe
+#ZSH_THEME="minimal" # Maybe
+#ZSH_THEME="murilasso" # Maybe
+#ZSH_THEME="muse" # Maybe
+#ZSH_THEME="simple" # Maybe
+#ZSH_THEME="skaro"
+#ZSH_THEME="smt"
+#ZSH_THEME="sorin"
+#ZSH_THEME="sporty_256"
+#ZSH_THEME="steeef"
+#ZSH_THEME="sunaku"
+#ZSH_THEME="sunrise"
+#ZSH_THEME="superjarin"
+#ZSH_THEME="takashiyoshida"
+#ZSH_THEME="terminalparty"
+#ZSH_THEME="theunraveler"
+#ZSH_THEME="tjkirch"
+#ZSH_THEME="tonotdo"
+#ZSH_THEME="trapd00r"
+#ZSH_THEME="wedisagree"
+#ZSH_THEME="wezm+"
+#ZSH_THEME="wezm"
+#ZSH_THEME="wmernagh"
+#ZSH_THEME="xiong-chiamiov-plus"
+#ZSH_THEME="xiong-chiamiov"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+COMPLETION_WAITING_DOTS="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+
 # shortcut to this dotfiles path is $ZSH
-export ZSH=$HOME/.dotfiles
+export DOTFILES=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Dropbox/Development
@@ -9,7 +60,7 @@ setopt auto_cd
 cdpath=($PROJECTS $IORA)
 
 # source every .zsh file in this rep
-for config_file ($ZSH/**/*.zsh) source $config_file
+for config_file ($DOTFILES/**/*.zsh) source $config_file
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
@@ -31,3 +82,4 @@ export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
 export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
 export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.4.4.1/jars"
+export PATH=$DOTFILES/bin:$PATH
