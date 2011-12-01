@@ -1,5 +1,5 @@
 set nofoldenable
-set relativenumber " line numbers are relative to current line
+" set relativenumber " line numbers are relative to current line
 " set undofile       " Create FILE.un~ files for persistent undo
 " set undodir=~/.vim/undodir " Persistent undo
 set number         " non-relative line numbers
