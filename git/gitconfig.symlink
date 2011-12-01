@@ -12,8 +12,11 @@
   who   = !git shortlog -sn
   lcrev = log --reverse --no-merges --stat @{1}..
   next = !git add . && git rebase --continue
-  today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
   unfuck = reset --hard HEAD
+  l = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  la = log --all --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  ll = log --stat --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  d = diff --word-diff
 [color]
   ui = auto
 [color "branch"]
