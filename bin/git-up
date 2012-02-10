@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# Usage: git-up
+#
+# Like git-pull but show a short and sexy log of changes
+# immediately after rebasing.
+#
+# Inspired by Kyle Neath's `git up' alias:
+# http://gist.github.com/249223
+#
+# Stolen from Ryan Tomayko
+# http://github.com/rtomayko/dotfiles/blob/rtomayko/bin/git-up
+
+set -e
+
+git fetch origin && git rebase origin/master
+
+# show diffstat of all changes
+echo "Diff:"
+git --no-pager diff --color --stat origin/master@{1}.. |
+sed 's/^/ /'
+
+# show an abbreviated commit log of stuff that was just merged.
+echo "Log:"
+git log --color --pretty=oneline --abbrev-commit origin/master@{1}.. |
+sed 's/^/  /'

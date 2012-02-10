@@ -1,0 +1,23 @@
+#!/bin/zsh
+#
+# Usage:
+#   git-pr
+#   git-pr <branch>
+#
+# Like git-pull but show a short and sexy log of changes
+# immediately after rebasing.
+#
+# Inspired by Kyle Neath's `git up' alias:
+# http://gist.github.com/249223
+#
+# Stolen from Ryan Tomayko
+# http://github.com/rtomayko/dotfiles/blob/rtomayko/bin/git-up
+
+set -e
+
+gh_info=`gh info`
+repo_user=`echo ${gh_info}|grep 'You are'|sed 's/You are //g'`
+repo_name=`echo ${gh_info}|grep '== Info for'|sed 's/== Info for //g'`
+branch_name=`git branch|grep '\*'|sed 's/\* //g'`
+pull_url="https://github.com/${repo_user}/${repo_name}/pull/new/${branch_name}"
+git fetch origin && git rebase origin/master && open ${pull_url}

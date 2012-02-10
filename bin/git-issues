@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+url = `git remote -v|grep origin|grep '(fetch)'`.split[1]
+user_repo = url.split(':')[1]
+user, repo = user_repo.split('/')
+cmd = "/usr/local/bin/issues #{user} #{repo.gsub('.git', '')}"
+exec cmd
