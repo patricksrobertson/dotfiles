@@ -1,5 +1,12 @@
-# gabebw's dotfiles
+# IoraHealth's dotfiles
 These are my dotfiles: `~/.*`
+
+## Cloning
+When you clone thes dotfiles locally they will need to be cloned into you home folder
+
+    git clone git@github.com:IoraHealth/dotfiles.git ~/.dotfiles. 
+    
+Alternatively you can clone someplace else and just create a symbolioc link to the repository.
 
 ## Linking the dotfiles into ~
 To interactively link the dotfiles into `~`, run:
@@ -25,6 +32,11 @@ This runs the following in order
 To see all of the tasks, run:
 
     thor list
+
+## VIM
+After you have linked the files you will want to run BundleInstall from vim. Open up vim and type
+
+    :BundleInstall
 
 ## Acknowledgements
 
