@@ -49,10 +49,10 @@ inoremap jk <Esc>
 :imap <F5> <C-o>:setlocal spell! spelllang=en_us<CR>
 
 " disable cursor keys in normal mode
-map <Left>  :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up>    :echo "no!"<cr>
-map <Down>  :echo "no!"<cr>
+map <Left>  :echo "'You suck at Vim' - W. Mernagh"<cr>
+map <Right> :echo "'You suck at Vim' - W. Mernagh"<cr>
+map <Up>    :echo "'You suck at Vim' - W. Mernagh"<cr>
+map <Down>  :echo "'You suck at Vim' - W. Mernagh"<cr>
 
 " Alternate file
 nnoremap <leader><leader> :A<CR>
