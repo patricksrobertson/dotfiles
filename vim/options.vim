@@ -31,3 +31,7 @@ set showbreak="@" " This is prepended to wrapped lines
 
 set list listchars=tab:»·,trail:· " Display extra whitespace
 set laststatus=2                  " Always show status line (not only for multiple windows)
+
+if has("gui_running")
+  set guioptions=egmrt
+endif

@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/wmernagh/Dropbox/Development/iora/bot/lib/iora_bot'
 let g:netrw_dirhist_2='/Users/wmernagh/Dropbox/Development/iora/IoraHealth/app/assets'
+let g:netrw_dirhist_3='/Users/robertps/iora/dotfiles/vim'
+let g:netrw_dirhist_4='/Users/robertps/iora/IoraHealth'
