@@ -1,0 +1,27 @@
+#!/bin/zsh
+#
+# Usage:
+#   git-pr
+#   git-pr <branch>
+#
+# Like git-pull but show a short and sexy log of changes
+# immediately after rebasing.
+#
+# Inspired by Kyle Neath's `git up' alias:
+# http://gist.github.com/249223
+#
+# Stolen from Ryan Tomayko
+# http://github.com/rtomayko/dotfiles/blob/rtomayko/bin/git-up
+
+set -e
+
+branch=$1
+if [ ! $1 ] ; then
+  print "Please specify the branch you want to merge into HEAD" && exit 1
+fi
+
+if [[ $(git rev-parse --verify HEAD) == $(git merge-base HEAD $branch) ]]; then
+  git merge $branch --no-ff -m "Merging feature branch $branch"
+else
+  print "Unable to merge fast forward! HEAD and $branch have diverged. Please rebase $branch first"
+fi
