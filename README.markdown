@@ -37,6 +37,15 @@ To see all of the tasks, run:
 After you have linked the files you will want to run BundleInstall from vim. Open up vim and type
 
     :BundleInstall
+    
+##Troubleshooting
+
+If your .vimrc does not appear to be loading and/or you are getting error messages about Bundle/Vundle or Pathogen try:
+
+1. `mv ~/.vim ~/.vim.bak.1`
+2. `ln -s ~/.dotfiles/vim ~/.vim` (assuming you cloned into `~/.dotfiles`)
+
+Then try :BundleInstall
 
 ## Acknowledgements
 
