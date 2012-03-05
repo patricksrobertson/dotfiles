@@ -21,3 +21,4 @@ Thumbs.db
 bundler_binstubs
 
 doc/tags
+vim/bundle/vundle/.netrwhist
