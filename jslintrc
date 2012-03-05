@@ -1,0 +1,5 @@
+/*jslint devel: true, undef: true, sloppy: true, vars: true, browser: true, eqeq: true, maxerr: 50, indent: 2, regexp: true, white: true, nomen: true */
+/*global jQuery, $ */
+/*global describe, beforeEach, it */
+
+/* vim: set ft=javascript: */
