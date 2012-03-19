@@ -23,6 +23,7 @@ source $BASE'ruby.zsh'
 source $BASE'rails.zsh'
 source $BASE'rvm.zsh'
 source $BASE'hitch.zsh'
+source $BASE'tmuxinator.zsh'
 
 export PATH
 trim_path
