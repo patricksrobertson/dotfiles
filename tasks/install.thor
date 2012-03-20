@@ -57,7 +57,7 @@ class Install < BetterThor
     installing 'RVM'
     # Requires "bash -c" because by default, the system command uses
     # /bin/sh, which chokes on the "<"s
-    system '/bin/bash -c "bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )"'
+    system '/bin/bash -c "bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)"'
   end
 
   desc "npm", "Install NPM, the node package manager"
