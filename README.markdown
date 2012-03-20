@@ -4,7 +4,7 @@ These are my dotfiles: `~/.*`
 ## Cloning
 When you clone thes dotfiles locally they will need to be cloned into you home folder
 
-    git clone git@github.com:IoraHealth/dotfiles.git ~/.dotfiles. 
+    git clone git@github.com:IoraHealth/dotfiles.git ~/.dotfiles
     
 Alternatively you can clone someplace else and just create a symbolioc link to the repository.
 
