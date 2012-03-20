@@ -24,7 +24,9 @@ end
 
 def update_pathogen
   # Not in bundle/, so do it by hand
-  Dir.chdir(File.join(File.dirname(__FILE__), 'autoload')) do
+  autoload_dir = File.join(File.expand_path(File.dirname(__FILE__)), 'autoload')
+  FileUtils.mkdir_p autoload_dir
+  Dir.chdir(autoload_dir) do
     File.open('pathogen.vim', 'w') do |f|
       f << open('https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim').read
     end
