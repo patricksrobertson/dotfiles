@@ -48,8 +48,8 @@ class Link < BetterThor
       link_file(file)
     end
 
-    def link_file(file)
-      full_dotfile_path = File.join(home_directory, dotfile_path(file))
+    def link_file(file, full_dotfile_path = nil)
+      full_dotfile_path ||= File.join(home_directory, dotfile_path(file))
       if file =~ /\.erb$/
         file_without_erb = file.sub(/\.erb$/, '')
         info("generating ~/#{dotfile_path(file_without_erb)}")
