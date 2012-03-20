@@ -56,6 +56,8 @@ $git_bundles = [
   "git://github.com/tpope/vim-rails.git",
   "git://github.com/tsaleh/vim-shoulda.git",
   "git://github.com/vim-ruby/vim-ruby.git",
+  "git://github.com/altercation/vim-colors-solarized.git",
+  "git://github.com/gmarik/vundle.git",
 ]
 
 # [name, script_id, script type]
