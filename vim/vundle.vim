@@ -35,6 +35,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'godlygeek/tabular'
 Bundle 'ack.vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'hallettj/jslint.vim'
 
 " Colorschemes
 Bundle 'Railscasts-Theme-GUIand256color'

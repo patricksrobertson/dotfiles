@@ -1,6 +1,7 @@
 ###########
 # ALIASES #
 ###########
+alias vi="vim"
 alias cp="cp -iv"
 alias rm="rm -iv"
 alias mv="mv -iv"
