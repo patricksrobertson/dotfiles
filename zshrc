@@ -1,5 +1,6 @@
 # We're in tmux, GO GO GO
 
+export TMPDIR=/tmp/
 BASE="$HOME/.dotfiles/zsh/"
 
 source $BASE'key_bindings.zsh'
