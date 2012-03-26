@@ -9,10 +9,6 @@ _ (an underscore) is always set to the result of the last successful expression
   %w{a b c}; _.map{|x| 'x'}. You have to do it in 2 lines.
 =end
 
-# ripl sources this file too, so check which one we're using.
-# ripl-irb defines IRB constant, so we check for nonexistence of Ripl
-using_irb = (not defined?(Ripl))
-
 def is_rails_3?
   Object.const_defined?(:Rails) && Rails::VERSION::STRING.to_i == 3
 end
@@ -30,19 +26,6 @@ end
     $stderr.puts "Couldn't load something for irb: #{err}"
   end
 end
-
-if using_irb
-  IRB.conf[:AUTO_INDENT] = true
-
-  # Set up Wirble, if it was loaded successfully
-  if defined?(Wirble)
-    Wirble.init
-    Wirble.colorize
-  end
-end
-
-# Set up Hirb, if it was loaded successfully
-Hirb::View.enable if defined?(Hirb)
 
 if is_rails_3?
   unless Rails.logger
