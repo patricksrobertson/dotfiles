@@ -33,3 +33,10 @@ if &t_Co > 2 || has("gui_running") " &t_Co > 2 => we have colors
 endif
 
 set pastetoggle=<F2>       " Hit <F2> to disable/enable autoindention for paste
+
+" Load users local overrides
+" You can load your fav colorscheme in there for example
+let local_vimrc = $HOME . "/.vimrc.local"
+if filereadable(local_vimrc)
+  source $HOME/.vimrc.local
+endif
