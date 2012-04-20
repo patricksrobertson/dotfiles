@@ -1,7 +1,10 @@
 # vim: syntax=gitconfig ft=gitconfig
 # See: man gitconfig
 # or http://www.kernel.org/pub/software/scm/git/docs/git-config.html
-<%= IO.read(File.join(File.dirname(__FILE__), 'gitconfig.local')) %>
+<%=
+  (IO.read(File.join(File.dirname(__FILE__), 'gitconfig.local')) rescue nil) ||
+  (IO.read(File.join(File.dirname(__FILE__), '..', 'gitconfig.local')) rescue nil)
+%>
 [init]
   templatedir = <%= File.expand_path(File.dirname(__FILE__)) %>/git-template-dir
 [alias]
