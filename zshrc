@@ -29,6 +29,12 @@ source $BASE'tmuxinator.zsh'
 export PATH
 trim_path
 
+# Allow for personal additions; for instance, aliases to programs only
+# installed by you.
+if [[ -s "$HOME/.zshrc_personal" ]]; then
+  source "$HOME/.zshrc_personal"
+fi
+
 # [In]offensive short fortunes, where short means <= 140 chars
 # fortune -a -s -n140
 
